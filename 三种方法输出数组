@@ -1,0 +1,54 @@
+#include<stdio.h>
+int main()//第一种方法，直接将数组逐项输出 
+{
+	int a[10];
+	int i;
+	
+	for(i=0;i<10;i++)
+	{
+		scanf("%d\n",&a[i]);
+	} 
+	
+	printf("\n");
+	
+	for(i=0;i<10;i++)
+	{
+		printf("%d",a[i]);
+	}
+}
+
+int main()//第二种方法，逐项浏览数组各项的地址，然后逐个输出每个地址中存放的值 
+{
+	int a[10];
+	int i;
+	
+	for(i=0;i<10;i++)
+	{
+		scanf("%d\n",&a[i]);
+	} 
+	
+	printf("\n");
+	
+	for(i=0;i<10;i++)
+	{
+		printf("%d",*(a+i));
+	}
+}
+
+int main()//第三种方法，通过p++移动指针，指针所指向的对象变了 
+{
+	int a[10];
+	int i;
+	int *p;
+	for(i=0;i<10;i++)
+	{
+		scanf("%d ",&a[i]);
+	}
+	
+	printf("\n");
+	
+	for(p=a;p<(a+10);p++)
+	{
+		printf("%d ",*p);
+	}
+} 
